@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="css/threecoldiv.css">
+  <script src="https://www.promisejs.org/polyfills/promise-6.1.0.min.js"></script>
+  <script type="text/javascript" src="api/jquery-1.11.2.min.js"></script>
+  <script type="text/javascript" src="api/parse-1.3.5.js"></script>
+  <script type="text/javascript" src="js/userinforep.js"></script>
+  <script type="text/javascript" src="js/serviceinfo.js"></script>
+  <script type="text/javascript" src="js/domElement.js"></script>
+  <script type="text/javascript" src="js/reformatter.js"></script>
+  <script type="text/javascript" src="js/signin.js"></script>
+  <script type="text/javascript" src="js/crtopmenu.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/crtopmenu.css">
+<body>
+
+<div class="jbTitle">
+  <h1>Telegroup Company Customer Representative Portal</h1>
+</div>
+<div class="jbMenu">
+  <p>
+    <span class = "menu-item">
+    <a href="rep-home.html">Home</a>
+    <a href="rep-customerlist.html">Customer List</a>
+    <a href="rep-customer-search.html">Search Customer</a>
+    <span id = "signbtn"> </span>
+    </span>
+  </p>
+</div>
+</br></br>
+<div class="jbContent">
+<span class = "body-item">
+
+
+<h1>Telecom Customer Representative</h1>
+<!--
+<button onclick = "location.href = 'rep-customerlist.html';" id = "myButton" class = float-left submit-button>
+	Customer List
+</button>-->
+</br>
+</br>
+
+Firstname: <input class = "inputs" id="firstname" type="String">
+</br>
+</br>
+
+Lastname: <input class = "inputs" id="lastname" type="String">
+</br>
+
+</br>
+Last 4 digit of SSN:	<input class = "inputs" id="lastssn" type="number">
+<button class= "myButton" id = "getinfo" >Get Info</button> </br>
+<script type="text/javascript">
+	$("#getinfo").click( function()
+	{
+
+		$("#userinfo").empty();
+		$("#usercurrentpackage").empty();
+		$("#usercurrentservice").empty();
+		$("#addservicebutton").empty();
+		$("#addpackagebutton").empty();
+		$("#removepackagebutton").empty();
+		$("#removeservicebutton").empty();
+		
+		if ( retrieveUserInfo() )
+		{
+			$("#addservicebutton").show();
+			$("#addpackagebutton").show();
+			$("#removepackagebutton").show();
+			$("#removeservicebutton").show();
+			$("#user").show();
+		}
+
+	});
+
+</script>
+
+</br></br></br>
+
+
+<form>
+	<fieldset>
+		<h2> Available Services</h2>
+		<script> displayAllServices("services"); </script>
+		<div id = "services"> </div>
+		<div id = "addservicebutton"></div>
+		</fieldset>
+</form>
+
+</br></br></br>
+
+<form>
+  <fieldset>
+	 <h2> Available Packages</h2>
+	 	<script> displayAllPackages( "package" ); </script>
+		<div id = "package"> </div>
+		<div id = "addpackagebutton"></div>
+	</fieldset>
+</form>
+
+</br></br></br>
+
+<form id = "user">
+	<fieldset>
+	<h2> User Information</h2>
+	<div id = "userinfo"> </div>
+	<h3> Packaged Services </h2>
+	<div id = "usercurrentpackage"> </div>
+	<div id = "removepackagebutton"> </div>
+	</br></br>
+	<h3> Unpackaged Services </h2>
+	<div id = "usercurrentservice"> </div>
+	<div id = "removeservicebutton"></div>
+	</fieldset>
+</form>
+
+			
+
+</span>
+</div>
+
+</body>
+</html> 

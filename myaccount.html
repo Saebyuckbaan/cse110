@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script type="text/javascript" src="api/jquery-1.11.2.min.js"></script>
+  <script type="text/javascript" src="api/parse-1.3.5.js"></script>
+  <script type="text/javascript" src="js/signin.js"></script>
+  <script type="text/javascript" src="js/currentuserinfo.js"></script>
+  <script type="text/javascript" src="js/domElement.js"></script>
+  <script type="text/javascript" src="js/servicemanager.js"></script>
+  <script type="text/javascript" src="js/customertopmenu.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/customertopmenu.css">
+</head>
+
+<body>
+
+<div class="jbTitle">
+  <h1>Telegroup Company</h1>
+</div>
+<div class="jbMenu">
+  <p>
+    <span class = "menu-item">
+    <a href="home.html">Home</a>
+    <a href="addservice.html">Add Service</a>
+    <a href="myaccount.html">My Account</a>
+    <span id = "signbtn"> </span>
+    <!-- <a href="signin.html">Sign In</a> -->
+    </span>
+    
+    <a class = "submenu-item" href="signup.html">Are You New User?</a>
+    
+  </p>
+</div>
+</br></br>
+<div class="jbContent">
+<span class = "body-item">
+
+<h1>My Account</h1>
+  <h4>Username: 
+  <span id= "usernameId"> </span></br></br>
+  <span id= "fullnameId"> </span></br>
+  <label for="Username"></label>
+  </h4>
+  <script>
+  		var str = getFromCurrentUser( "username" ); 
+      if ( str == false)
+      {
+        window.location.href="signin.html"
+        alert("Please Log in First");
+      }
+  		document.getElementById("usernameId").appendChild(document.createTextNode( str )); 
+  </script>
+
+	<label for="Fullname"></label>
+	<script>
+    var str = ( "\nWelcome" + " " + getFromCurrentUser( "firstname" ) + " " + getFromCurrentUser("lastname") ); 
+  	document.getElementById("fullnameId").appendChild(document.createTextNode( str )); 
+	</script>
+
+  <div>
+  Set Threshold Amount:
+  <input id="thresholdamt" type="String">
+  <button class="myButton" id = "setThresholdBtn" type="button" name = "setThresholdBtn" >Set Threshold</button>
+  <script>
+    $("#setThresholdBtn").click( function ( ) 
+    {
+      setThreshold();
+    });
+  </script>
+  </div>
+
+  
+  </br></br>
+  Are you not satisfied with our service(s)? :
+  <button class="myButton" id = "cancelService" type="button" >Cancel All Service(s)</button>
+  <script>
+    $("#cancelService").click( function ( ) 
+    {
+      var cancelflag = confirm( "Do you really want to cancel services? Early termination fee may be applied on your next bill.");
+      if (cancelflag)
+      {
+        selfCancelServices();
+      }
+      else
+      {
+
+      }
+    });
+  </script>
+
+  </br></br></br>
+  My Packages:
+  </br></br>
+  <span id = 'packageid'> </span>
+  </br>
+  <button class="myButton" id = "rmpackage" type="button" name = "rmpackage" >Remove Package</button>
+  <script type="text/javascript">
+    $("#rmpackage").click(function (){
+      selfRemovePackage( "currpackage" );
+    });
+
+  </script>
+
+
+
+  </br></br>
+  My Unpackaged Services:
+  </br></br>
+	<span id = 'serviceid'> </span></br></br>
+  <script>    
+    Parse.User.current().fetch().then( function (currentUser) 
+    { 
+      displayCurrentServices("serviceid") 
+      displayCurrentPackages("packageid");
+    });
+  </script>
+	<button class="myButton" id = "ssibal" type="button" onclick="removeService( &#34;currservice&#34;)">Remove Service</button>
+
+
+
+  <script type="text/javascript">
+    $("#ssibal").click(function (){
+      
+      //removeService( "currservice" );
+      Parse.User.current().fetch()
+      .then( function() 
+      {
+        $("#currpackages").empty();
+        $("#currservices").empty();
+        $("#currservices2").empty();
+        $("#cost").empty();
+      })
+      .then( function() 
+      {
+        getUserPackagesInfo( Parse.User.current());
+        getUserServicesInfo( Parse.User.current());
+      });
+      
+    });
+  </script>
+
+
+
+
+
+</br></br>
+</br></br>
+
+<form>
+  <fieldset>
+    <h2> Customer Bill: </h2></br>
+    <h4> Packaged Services: </h4> </br>
+    <div id = "packagebill"></div></br></br>
+    <h4> Unpackaged Services: </h4> </br>
+    <div id = "currservices"></div></br></br>
+    <h4> Bill Summary: </h4> </br>
+    <div id = "cost"></div>
+  </fieldset>
+</form>
+<script>
+  Parse.User.current().fetch()
+  .then( function () {
+  getUserPackagesInfo( Parse.User.current() );
+  getUserServicesInfo( Parse.User.current() );
+  calculateBill();
+  })
+
+</script>
+
+</span>
+</div>
+
+</body>
+</html> 

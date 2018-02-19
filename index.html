@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script type="text/javascript" src="api/jquery-1.11.2.min.js"></script>
+  <script type="text/javascript" src="api/parse-1.3.5.js"></script>
+  <script type="text/javascript" src="js/signin.js"></script>
+    <script type="text/javascript" src="js/customertopmenu.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/customertopmenu.css">
+</head>
+<body>
+<div class="jbTitle">
+  <h1>Telegroup Company</h1>
+</div>
+<div class="jbMenu">
+  <p>
+    <span class = "menu-item">
+    <a href="home.html">Home</a>
+    <a href="addservice.html">Add Service</a>
+    <a href="myaccount.html">My Account</a>
+    <span id = "signbtn"> </span>
+    </span>
+    
+    <a class = "submenu-item" href="signup.html">Are You New User?</a>
+    
+  </p>
+</div>
+</br></br>
+<div class="jbContent">
+<span class = "body-item">
+
+
+<h1>Telecom Log in </h1>
+
+<div>
+Username: <input id="username" class="inputs" placeholder="Username" type="String"></br>
+Password:	<input id="password"  class="inputs" placeholder="Password" type="password"></br>
+<button class="myButton" onclick = "signIn()">Log In</button> </br>
+
+</br>
+Not user yet? 
+<button class="myButton" onclick = "location.href = 'signup.html';" id = "myButton" class = <"float-left submit-button">
+Sign up
+</button>
+
+</br>
+</br>
+Forgot your password? 
+<button class="myButton" onclick = "location.href = 'resetpassword.html';" >
+	Change Password
+</button>
+
+
+</div>
+
+</div></span>
+</body>
+</html> 

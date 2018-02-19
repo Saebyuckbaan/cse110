@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="css/threecoldiv.css">
+  <script src="https://www.promisejs.org/polyfills/promise-6.1.0.min.js"></script>
+  <script type="text/javascript" src="api/jquery-1.11.2.min.js"></script>
+  <script type="text/javascript" src="api/parse-1.3.5.js"></script>
+  <script type="text/javascript" src="js/userinforep.js"></script>
+  <script type="text/javascript" src="js/serviceinfo.js"></script>
+  <script type="text/javascript" src="js/domElement.js"></script>
+  <script type="text/javascript" src="js/reformatter.js"></script>
+  <script type="text/javascript" src="js/signin.js"></script>
+  <script type="text/javascript" src="js/crtopmenu.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/crtopmenu.css">
+<body>
+
+<div class="jbTitle">
+  <h1>Telegroup Company Customer Representative Portal</h1>
+</div>
+<div class="jbMenu">
+  <p>
+    <span class = "menu-item">
+    <a href="rep-home.html">Home</a>
+    <a href="rep-customerlist.html">Customer List</a>
+    <a href="rep-customer-search.html">Search Customer</a>
+    <span id = "signbtn"> </span>
+    </span>
+  </p>
+</div>
+</br></br>
+<div class="jbContent">
+<span class = "body-item">
+
+<h2>Welcome Our Staff!</h2>
+<span id = "repuserid"></span>
+<script>
+$( document ).ready( function() {
+	var username = Parse.User.current().get("username");
+	$("#repuserid").append( username + ", You are logged in since: " + Date());
+});
+</script>
+
+
+</span>
+</div>
+
+</body>
+</html> 

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="css/threecoldiv.css">
+  <script type="text/javascript" src="api/jquery-1.11.2.min.js"></script>
+  <script type="text/javascript" src="api/parse-1.3.5.js"></script>
+  <script type="text/javascript" src="js/serviceinfo.js"></script>
+  <script type="text/javascript" src="js/domElement.js"></script>
+  <script type="text/javascript" src="js/reformatter.js"></script>
+  <script type="text/javascript" src="js/servicemanager.js"></script>
+  <script type="text/javascript" src="js/marketingRep.js"></script>
+  <script type="text/javascript" src="js/signin.js"></script>
+  <script type="text/javascript" src="js/mrtopmenu.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/mrtopmenu.css">
+
+  <!--<script type="text/javascript" src="js/userStatus.js"></script>-->
+  <script>
+  	$(document).ready( function () 
+  	{
+  		displayAllServices( "listofservices" ); //checkboxid = "newservice"
+
+
+  		$("#submit").click(function()
+  		{
+  				addNewPackageToParse();
+			});
+
+
+
+
+		});
+  </script>
+
+<body>
+<div class="jbTitle">
+  <h1>Telegroup Company Marketing Representative Portal</h1>
+</div>
+<div class="jbMenu">
+  <p>
+    <span class = "menu-item">
+    <a href="market-rep-home.html">Home</a>
+    <a href="market-rep-add-package.html">Add New Package</a>
+    <a href="market-rep-edit-package.html">Edit Existing Package</a>
+    <a href="market-rep-delete-package.html">Delete Existing Package</a>
+    <a href="market-rep-add-service.html">Add New Service</a>
+    <a href="market-rep-delete-service.html">Delete Existing Service</a>
+    <span id = "signbtn"> </span>
+    </span>
+  </p>
+</div>
+</br></br>
+<div class="jbContent">
+<span class = "body-item">
+
+<h1>Add New Package To System</h1>
+
+<form>
+	<fieldset>
+		<h2> New Package Information</h2>
+		New Package Name: <input class = "inputs" id="nameOfPackage" type="String"> 
+		</br></br> 
+		New Package Price: <input class = "inputs"  id="priceOfPackage" type="Number"> 
+		<div> </div>
+
+		</br></br></br>
+
+		<h2> List of Available Services</h2>
+		<div id = "listofservices"> </div>
+
+		</br></br></br>
+		<button class = "myButton" id = "submit" type="button">Add Package</button>
+	</fieldset>
+</form>
+
+
+
+</span>
+</div>
+
+</body>
+</html> 

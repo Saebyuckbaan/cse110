@@ -1,0 +1,14 @@
+{
+    "applications": {
+        "Telegroup Company": {
+            "applicationId": "QKtdBDbAUs7s8sTutviIQr2jWm0UpCZmJKyVwbhB", 
+            "masterKey": "0fepVyVk7keBB3FGZDt0AWuZgM7sYU72PYVT2lgH"
+        }, 
+        "_default": {
+            "link": "Telegroup Company"
+        }
+    }, 
+    "global": {
+        "parseVersion": "1.3.5"
+    }
+}

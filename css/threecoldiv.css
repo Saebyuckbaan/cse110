@@ -1,0 +1,12 @@
+.left-col {
+    float: left;
+    width: 12%;
+}
+.center-col {
+    float: left;
+    width: 12%;
+}
+.right-col {
+    float: left;
+    width: 76%;
+}

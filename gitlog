@@ -1,0 +1,162 @@
+commit 50b82aa4cfdedac294cf78ec7cea4332bbd1a416
+Author: Davis Yi <dsyi@ucsd.edu>
+Date:   Sat Mar 7 00:36:15 2015 -0800
+
+    First Commit with New Developer
+
+commit 967e1cb22d1450d8662d847f4c96cbf741ed6e1c
+Author: Cheyenne <catapour@ucsd.edu>
+Date:   Mon Feb 23 20:38:37 2015 -0800
+
+    Add new service GUI for Market Rep
+
+commit 08b1b0f9d7763badd502ff603aea3304ccea60af
+Merge: edd010e f5155e7
+Author: Davis Yi <dsyi@ucsd.edu>
+Date:   Mon Feb 23 20:36:33 2015 -0800
+
+    Merge branch 'master' of https://bitbucket.org/therealcse110/therealcse110
+
+commit edd010e088ea23d0a0ddec5e9621425a68431646
+Author: Davis Yi <dsyi@ucsd.edu>
+Date:   Mon Feb 23 20:36:16 2015 -0800
+
+    Refactor addservice and remove service into multiple methods.
+
+commit f5155e73f3b448f92b53861134afc2177777cd64
+Author: Cheyenne <catapour@ucsd.edu>
+Date:   Mon Feb 23 20:16:53 2015 -0800
+
+    Added Market Rep home page, updated sign in function to accept both customers and reps
+
+commit d87263705dee9840cdd49596215dba618131ff0c
+Author: Davis Yi <dsyi@ucsd.edu>
+Date:   Sat Feb 14 11:24:20 2015 -0800
+
+    Unit Test Added
+
+commit 96512a702caaec76e440f6a6e8d1c7cc3da61f64
+Author: Davis Yi <dsyi@ucsd.edu>
+Date:   Thu Feb 12 21:53:23 2015 -0800
+
+    Javascript codes are reduced
+
+commit 1ce650f762fab7169dc6316e427990713383185a
+Author: Davis Yi <dsyi@ucsd.edu>
+Date:   Thu Feb 12 18:43:43 2015 -0800
+
+    some html page name changed. minor bug fixed on rep page
+
+commit 491bbddabf4d490f4db3e07de53eba66811c9d08
+Author: Davis Yi <dsyi@ucsd.edu>
+Date:   Tue Feb 10 22:26:09 2015 -0800
+
+    navigation modification
+
+commit d6766fef858d5eae5ff9f70f62099f90c612fcd7
+Author: Davis Yi <dsyi@ucsd.edu>
+Date:   Tue Feb 10 22:12:19 2015 -0800
+
+    found bug
+
+commit f607725a444e85a526c9b1eb292a1129fc71dd71
+Author: Davis Yi <dsyi@ucsd.edu>
+Date:   Tue Feb 10 21:53:29 2015 -0800
+
+    fancy table
+
+commit 1ee0df6a58476b20570f9e98176f1dd06dca4fcd
+Author: Davis Yi <dsyi@ucsd.edu>
+Date:   Tue Feb 10 21:46:50 2015 -0800
+
+    customer list
+
+commit 4b7685dd00bde99d1ffa39694698d45f8c8abab4
+Author: Davis Yi <dsyi@ucsd.edu>
+Date:   Tue Feb 10 21:42:54 2015 -0800
+
+    home is commited
+
+commit 2cbdf8d2cb30c59d5df3fc855a475e27546005bd
+Author: Davis Yi <dsyi@ucsd.edu>
+Date:   Tue Feb 10 21:31:29 2015 -0800
+
+    Customer Representative
+
+commit 22baa82e99a237526c8fcd60f9dc0dd4e083d17e
+Author: Davis Yi <dsyi@ucsd.edu>
+Date:   Tue Feb 10 16:33:10 2015 -0800
+
+    Delete Service
+
+commit 398bb3e676ef600aec26cb211cfa501a53b5f2ca
+Author: Davis Yi <dsyi@ucsd.edu>
+Date:   Mon Feb 9 23:26:39 2015 -0800
+
+    2 User stories (Add/remove services) has been implemented
+
+commit 72d75fb335cc4757241dc8f1b02c5f6b2efe96e3
+Author: Davis Yi <dsyi@ucsd.edu>
+Date:   Mon Feb 9 18:54:12 2015 -0800
+
+    home implemented
+
+commit c10d7dd50be1f8c58a513e36895cca2d9bb30951
+Author: Davis Yi <dsyi@ucsd.edu>
+Date:   Mon Feb 9 18:48:02 2015 -0800
+
+    home.html, userinfo.js and signout function implemented
+
+commit 73a02724af01b53d7ead4ca78ebe5b66943ad4d6
+Author: Davis Yi <dsyi@ucsd.edu>
+Date:   Mon Feb 9 16:12:15 2015 -0800
+
+    Sign up, Sign in,and  Password Change implemented
+
+commit ebd54a3741cec814d55fba1281c5dd085c9a5f8d
+Author: Davis Yi <dsyi@ucsd.edu>
+Date:   Mon Feb 9 11:38:36 2015 -0800
+
+    signup.js has been fixed
+
+commit ca45538a0b726a4fbf674c57ad8ffb33232c7a8f
+Author: Davis Yi <dsyi@ucsd.edu>
+Date:   Sat Feb 7 02:11:59 2015 -0800
+
+    Parse DB has been sync to the sign up page
+
+commit 16c5c1cefff227f43f1e1a0e6134347082db4c05
+Author: Cheyenne <catapour@ucsd.edu>
+Date:   Wed Jan 28 16:10:35 2015 -0800
+
+    Password Change
+
+commit 53fadac4b72176ab29bb5f4b4b7a6bc64acde314
+Author: Cheyenne <catapour@ucsd.edu>
+Date:   Wed Jan 28 14:34:53 2015 -0800
+
+    login now working
+
+commit 1b4a455581690e3d8d54677f279f4cf69161c4ba
+Author: Cheyenne <catapour@ucsd.edu>
+Date:   Wed Jan 28 03:09:18 2015 -0800
+
+    login working
+
+commit 0fa53ed2e5e6008604959120ff7db708a6dc6c7a
+Author: Cheyenne <catapour@ucsd.edu>
+Date:   Wed Jan 28 00:27:33 2015 -0800
+
+    password strength check
+
+commit 1dc23e92e9d27469c04c24eab003debffb55706e
+Author: Davis Yi <dsyi@ucsd.edu>
+Date:   Tue Jan 27 21:01:59 2015 -0800
+
+    some frontend appearance on html file has been made
+
+commit 90af3fda1732eb318bef7327d7d6d6318c0e58ff
+Author: Davis Yi <dsyi@ucsd.edu>
+Date:   Sat Jan 24 16:50:30 2015 -0800
+
+    First Commit
